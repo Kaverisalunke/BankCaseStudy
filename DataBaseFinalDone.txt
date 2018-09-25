@@ -1,0 +1,20 @@
+db.upsMobile.insert([{"email" : "mansee@yahoo.com", "newnum" : "564636213" },{"email" : "vishal@yahoo.com", "newnum" : "9421417731" }])
+
+
+
+db.Login.insert([{"hid" : 1, "username" : "poorva", "password" : "poorva" },{"hid" : 2, "username" : "vishal", "password" : "vishal" },{"hid" : 3, "username" : "kavish", "password" : "kavish" },{"hid" : 4, "username" : "shikha", "password" : "daka" },{"hid" : 5, "username" : "aina", "password" : "aina" },{"hid" : 6, "username" : "maansi", "password" : "maansi" },{"hid" : 7, "username" : "nirbhay", "password" : "nirbhay" }])
+
+
+
+
+db.accHolder.insert([{"hid" : 1, "name" : "Poorva Gupta", "email" : "poorva@yahoo.com", "mobile" : "24632345", "dob" : "1987-05-09", "address" : "Sector-62, Block-A", "gender" : "F", "amount" : 200, "accno" : "987654" },{"hid" : 2, "name" : "Vishal Vaibhav", "email" : "vishal@yahoo.com", "mobile" : "8843565656", "dob" : "1989-06-10", "address" : "Sector-61, Block-A", "gender" : "M", "amount" : 200, "accno" : "257651" },{"hid" : 3, "name" : "Kaveri Salunke", "email" : "kaveri@yahoo.com", "mobile" : "845665426", "dob" : "1990-07-12", "address" : "Sector-4, Block-A", "gender" : "F", "amount" : 300, "accno" : "757657" },{"hid" : 4, "name" : "Shikha Daka", "email" : "shikha@yahoo.com", "mobile" : "645665426", "dob" : "1998-09-15", "address" : "Sector-34, Block-A", "gender" : "F", "amount" : 700, "accno" : "854652" },{"hid" : 5, "name" : "Aina Shukla", "email" : "aina@yahoo.com", "mobile" : "654665426", "dob" : "1995-04-29", "address" : "Sector-62, Block-A", "gender" : "F", "amount" : 500, "accno" : "387655" },{"hid" : 6, "name" : "Mansee Jain", "email" : "mansee@yahoo.com", "mobile" : "7845665426", "dob" : "2000-11-14", "address" : "Sector-62, Block-B", "gender" : "F", "amount" : 600, "accno" : "686547" },{"hid" : 7, "name" : "Nirbhay Kumar", "email" : "nirbhay@yahoo.com", "mobile" : "94545665426", "dob" : "1999-11-15", "address" : "Sector-62, Block-A", "gender" : "M", "amount" : 800, "accno" : "157657" }])
+
+
+db.admin.insert()
+{ "username" : "visha@dxcindia", "password" : "vaibhav@dxc" }
+{ "username" : "kaveri@dxcindia", "password" : "kaveri@dxc" }
+{  "username" : "shikha@dxcindia", "password" : "shikha@dxc" }
+{  "username" : "poorva@dxcindia", "password" : "poorva@dxc" }
+
+
+
