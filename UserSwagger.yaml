@@ -1,0 +1,261 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Bank Management System
+  description: 'Online Banking website.'
+  termsOfService: http://localhost:8080/terms
+  contact:
+    name: DXC Group
+  license:
+    name: DXC Group
+host: localhost
+basePath: /Casestudy/rest/bs
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /regist/name/username/password/email/mobile/dob/address/gender:
+    get:
+      description: User Registeration Form
+      operationId: regist
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+     
+      parameters:
+      - name: name
+        in: query
+        description: Enter your Name
+        required: true
+        type: string
+        
+      - name: username
+        in: query
+        description: Enter Username
+        required: true
+        type: string
+        
+      - name: password
+        in: query
+        description: Enter Password
+        required: true
+        type: string
+        
+      - name: email
+        in: query
+        description: Enter your email
+        required: true
+        type: string
+        
+      - name: mobile
+        in: query
+        description: Enter your mobile number
+        required: true
+        type: string
+        
+      - name: dob
+        in: query
+        description: Enter your date of birth
+        required: true
+        type: string
+        
+      - name: address
+        in: query
+        description: Enter your address
+        required: true
+        type: string
+        
+      - name: gender
+        in: query
+        description: Enter your gender
+        required: true
+        type: string
+      
+      responses:
+        '200':
+          description: registeration successfully done!
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /ulogin/uname/pwd:
+    get:
+      description: User Login form
+      operationId: ulogin
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      - name: uname
+        in: query
+        description: Enter your username
+        required: true
+        type: string
+      
+      - name: pwd
+        in: query
+        description: Enter password
+        required: true
+        type: string
+      
+      responses:
+        '200':
+          description: Login successful!
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /getStmt/email:
+    get:
+      description: Get MiniStatement
+      operationId: getStmt
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      
+      - name: email
+        in: query
+        description: Enter your email id
+        required: true
+        type: string
+      
+      responses:
+        '200':
+          description: Get MiniStatement Done!
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /insNum/email/nmobile:
+    get:
+      description: Change Mobile number request
+      operationId: insNum
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      
+      - name: email
+        in: query
+        description: Enter your email id
+        required: true
+        type: string
+        
+      - name: nmobile
+        in: query
+        description: Enter your new mobile number
+        required: true
+        type: string
+        
+      responses:
+        '200':
+          description: Mobile number change request applied.
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /chgPass/username/npass:
+    get:
+      description: Change user password
+      operationId: chgPass
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      
+      - name: username
+        in: query
+        description: Enter your username
+        required: true
+        type: string
+        
+      - name: npass
+        in: query
+        description: Enter your new password
+        required: true
+        type: string
+        
+      responses:
+        '200':
+          description: Password successfully changed.
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /transamount/email/amount:
+    get:
+      description:  Transfer amount to another person's account
+      operationId: transamount
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      
+      - name: email
+        in: query
+        description: Enter your email id.
+        required: true
+        type: string
+      
+      - name: amount
+        in: query
+        description: Enter amount to be transferred.
+        required: true
+        type: string
+        
+      responses:
+        '200':
+          description: Amount transfer successful 
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /viewbal/email:
+    get:
+      description: View your account balance 
+      operationId: viewbal
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      
+      - name: email
+        in: query
+        description: Enter your email id
+        required: true
+        type: string
+        
+      responses:
+        '200':
+          description: Amount in your account displayed.
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  
+          
