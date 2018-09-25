@@ -1,0 +1,156 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Bank Management System
+  description: 'Online Banking website for admin.'
+  termsOfService: http://localhost:8080/terms
+  contact:
+    name: DXC Group
+  license:
+    name: DXC Group
+host: localhost
+basePath: /Casestudy/rest/bs
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+          
+  /alogin/username/password:
+    get:
+      description: Admin Login form
+      operationId: alogin
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      - name: username
+        in: query
+        description: Enter your username
+        required: true
+        type: string
+      
+      - name: password
+        in: query
+        description: Enter password
+        required: true
+        type: string
+      
+      responses:
+        '200':
+          description: Login successful!
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /retView:
+    get:
+      description: View Mobile change requests
+      operationId: retView
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      
+      responses:
+        '200':
+          description: View Mobile change requests done
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /vermobile:
+    get:
+      description: Verify user's mobile change requests
+      operationId: vermobile
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+        
+      responses:
+        '200':
+          description: Verify user's mobile change requests done
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /transamount/email/amount:
+    get:
+      description:  Add amount to a particular user's account
+      operationId: transamount
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      
+      - name: email
+        in: query
+        description: Enter your email id.
+        required: true
+        type: string
+      
+      - name: amount
+        in: query
+        description: Enter amount to be transferred.
+        required: true
+        type: string
+        
+      responses:
+        '200':
+          description: Amount transfer successful 
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  /sendamount/email/temail/amt:
+    get:
+      description: Transfer money from one account to another 
+      operationId: sendamount
+      produces:
+      - application/json
+      - application/xml
+      - text/xml
+      - text/html
+      parameters:
+      
+      - name: email
+        in: query
+        description: Enter your email id
+        required: true
+        type: string
+        
+      - name: temail
+        in: query
+        description: Enter target email id
+        required: true
+        type: string 
+        
+      - name: amt
+        in: query
+        description: Enter amount to be transferred.
+        required: true
+        type: string  
+        
+      responses:
+        '200':
+          description: Transfer money from one account to another
+          schema:
+            type: string
+        default:
+          description: unexpected error
+          
+  
+          
